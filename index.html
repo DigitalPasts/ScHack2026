@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | DANES ScHack 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/DANES_ScHack_OD.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-brand">
+        <img src="images/DANES_ScHack_OD.jpg" alt="DANES" class="nav-brand-logo"
+             onerror="this.style.display='none'">
+        DANES ScHack 2026
+      </a>
+      <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false"
+              onclick="toggleNav(this)">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="tracks.html">Tracks</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="registration.html">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <!-- TODO: replace placeholder gradient with a high-quality image of Turin
+       (e.g. Mole Antonelliana) or ancient Near Eastern imagery.
+       Suggested: CC-licensed image from Wikimedia Commons.
+       In styles.css .hero, add: background-image: url('images/hero-bg.jpg');
+       and adjust the gradient overlay accordingly. -->
+  <section class="hero" aria-label="Hero">
+    <h1>DANES ScHack 2026</h1>
+    <p class="hero-sub">First DANES Summer School and Hackathon</p>
+    <div class="hero-facts" role="list">
+      <span role="listitem">&#128197; July 6–10, 2026</span>
+      <span role="listitem">&#127981; University of Turin, Italy</span>
+      <span role="listitem">&#127959; Three parallel tracks</span>
+      <span role="listitem">&#127891; Open to BA, MA &amp; PhD students</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="tracks.html" class="btn btn-primary">Explore Tracks &rarr;</a>
+      <a href="registration.html" class="btn btn-secondary">Register Now &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="page-main">
+
+    <!-- About -->
+    <section class="section-block" id="about">
+      <h2>About the Summer School</h2>
+      <p>
+        The first <strong>DANES Summer School and Hackathon (DANES ScHack 2026)</strong> will take
+        place 6–10 July 2026 at the University of Turin, Italy. Organised by the
+        Digital Ancient Near Eastern Studies (DANES) Network, the summer school brings together
+        students and teachers at the intersection of ancient Near Eastern studies, computational
+        linguistics, computer vision, and network analysis.
+      </p>
+      <p>
+        Each track combines three hours of morning teaching (10:00–13:00) with three hours of
+        afternoon hackathon-style practical sessions (15:00–18:00). Students are welcome — and
+        encouraged — to bring their own datasets and research questions. No prior programming
+        experience is required.
+      </p>
+      <p>
+        Accepted participants will receive a certificate of completion. Accommodation and meals
+        are included in the registration fee of €200.
+      </p>
+    </section>
+
+    <!-- Track cards -->
+    <section class="section-block" id="tracks">
+      <h2>Three Parallel Tracks</h2>
+      <div class="tracks-grid">
+
+        <div class="track-card t1">
+          <span class="track-badge">Track 1</span>
+          <h3>Ancient Language Processing</h3>
+          <p class="track-focus">Texts · NLP, computational linguistics, treebanks, ancient language processing</p>
+          <p>Explore the full pipeline from digital language resources to large language models,
+             working with cuneiform, Akkadian, Latin, and Ancient Greek corpora.</p>
+          <a href="tracks.html#track-alp" class="btn btn-outline" style="font-size:0.85rem; padding:0.5rem 1.1rem;">Learn more &rarr;</a>
+        </div>
+
+        <div class="track-card t2">
+          <span class="track-badge">Track 2</span>
+          <h3>Computer Vision for Material Culture</h3>
+          <p class="track-focus">Material Culture · 2D Computer Vision &amp; OCR, 3D Modeling, Photogrammetry</p>
+          <p>Apply 2D and 3D computational imaging tools to ancient artefacts and spaces —
+             from computer vision and OCR to 3D modelling with GigaMesh and multimodal LLMs.</p>
+          <a href="tracks.html#track-cv" class="btn btn-outline" style="font-size:0.85rem; padding:0.5rem 1.1rem;">Learn more &rarr;</a>
+        </div>
+
+        <div class="track-card t3">
+          <span class="track-badge">Track 3</span>
+          <h3>Network Analysis for Ancient Cultures</h3>
+          <p class="track-focus">Networks · Spatial and social network analysis, dynamic network visualization</p>
+          <p>Model dynamic, interactive aspects of ancient societies — trade, motion, the spread
+             of goods — using open network analysis tools and real datasets.</p>
+          <a href="tracks.html#track-network" class="btn btn-outline" style="font-size:0.85rem; padding:0.5rem 1.1rem;">Learn more &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Practical info strip -->
+    <div class="info-strip" role="list" aria-label="Key facts">
+      <div class="info-strip-item" role="listitem">
+        <span class="info-label">Registration fee</span>
+        <span class="info-value">€200 — includes accommodation &amp; meals</span>
+      </div>
+      <div class="info-strip-item" role="listitem">
+        <span class="info-label">Places per track</span>
+        <span class="info-value">Up to 10 students</span>
+      </div>
+      <div class="info-strip-item" role="listitem">
+        <span class="info-label">Requirement</span>
+        <span class="info-value">No prior programming experience</span>
+      </div>
+      <div class="info-strip-item" role="listitem">
+        <span class="info-label">Certificate</span>
+        <span class="info-value">Issued to all participants</span>
+      </div>
+      <div class="info-strip-item" role="listitem">
+        <span class="info-label">Host</span>
+        <span class="info-value">Dipartimento di Studi Storici, University of Turin</span>
+      </div>
+    </div>
+
+    <!-- Organisers -->
+    <section class="section-block" id="organisers">
+      <h2>Organisers</h2>
+      <p>
+        DANES ScHack 2026 is organised by
+        <strong>Maurizio Viano</strong>, <strong>Elena Devecchi</strong>, and
+        <strong>Francesco Giuseppe Barsacchi</strong> (University of Turin), with
+        <strong>Shai Gordin</strong> (DHSS, Open University of Israel) as Academic Coordinator.
+      </p>
+      <div class="organisers-row" aria-label="Organiser logos">
+        <div class="org-logo">
+          <img src="images/unito-logo.svg" alt="University of Turin"
+               onerror="this.parentElement.innerHTML='<span class=\'org-logo-placeholder\'>[University of Turin logo — see images/README.txt]</span>'">
+        </div>
+        <div class="org-logo">
+          <img src="images/DANES_ScHack_OD.jpg" alt="DANES Network"
+               onerror="this.parentElement.innerHTML='<span class=\'org-logo-placeholder\'>[DANES logo — see images/README.txt]</span>'">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>DANES ScHack 2026</h4>
+        <address>
+          <p>University of Turin, Italy</p>
+          <p>July 6–10, 2026</p>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Part of the DANES Network</h4>
+        <p>Digital Ancient Near Eastern Studies<br>
+           <a href="https://opendanes.org" target="_blank" rel="noopener">opendanes.org</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Organised by</h4>
+        <p>Maurizio Viano, Elena Devecchi &amp;<br>Francesco Giuseppe Barsacchi<br>(University of Turin)</p>
+        <p>Academic Coordinator: Shai Gordin<br>(DHSS, Open University of Israel)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          <a href="mailto:maurizio.viano@unito.it">maurizio.viano@unito.it</a><br>
+          <a href="mailto:elena.devecchi@unito.it">elena.devecchi@unito.it</a><br>
+          <a href="mailto:shygordin@gmail.com">shygordin@gmail.com</a> (academic content)
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 DANES Network &mdash; <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(btn) {
+      var links = document.getElementById('nav-links');
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.innerHTML = open ? '&times;' : '&#9776;';
+    }
+  </script>
+
+</body>
+</html>

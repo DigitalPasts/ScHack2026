@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program | DANES ScHack 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/DANES_ScHack_OD.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-brand">
+        <img src="images/DANES_ScHack_OD.jpg" alt="DANES" class="nav-brand-logo"
+             onerror="this.style.display='none'">
+        DANES ScHack 2026
+      </a>
+      <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false"
+              onclick="toggleNav(this)">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracks.html">Tracks</a></li>
+        <li><a href="program.html" class="active">Program</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="registration.html">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page title -->
+  <div class="page-title">
+    <h1>Program</h1>
+    <p class="text-muted mt-1" style="font-style:italic; font-size:1rem;">
+      University of Turin &middot; July 6–10, 2026 &middot; Morning 10:00–13:00 / Afternoon 15:00–18:00
+    </p>
+  </div>
+
+  <main class="page-main">
+
+    <!-- Legend -->
+    <div class="section-block" style="display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center; margin-bottom:2rem;">
+      <strong style="color:var(--primary); margin-right:0.5rem;">Tracks:</strong>
+      <span class="session-label label-t1">Track 1 — Ancient Language Processing</span>
+      <span class="session-label label-t2">Track 2 — Computer Vision</span>
+      <span class="session-label label-t3">Track 3 — Network Analysis</span>
+    </div>
+
+    <!-- TODO: replace Track 2 placeholder cells with the full schedule once received
+         from Morris Alper and Steffen Bauer (expected by week of 6 April 2026). -->
+
+    <!-- ===== Day 1: Monday 6 July ===== -->
+    <section class="schedule-day" id="day-1">
+      <h2>Monday, 6 July 2026</h2>
+      <table class="schedule-table" aria-label="Schedule for Monday 6 July">
+        <thead>
+          <tr>
+            <th class="th-time">Time</th>
+            <th class="th-t1">Track 1 — Ancient Language Processing</th>
+            <th class="th-t2">Track 2 — Computer Vision</th>
+            <th class="th-t3">Track 3 — Network Analysis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-cell">10:00–13:00<br><em style="font-weight:normal;font-size:0.75rem;">Morning Teaching</em></td>
+            <td>
+              <span class="session-label label-t1">Teaching</span>
+              <div class="session-theme">Introduction &amp; Digital Resources</div>
+              <div class="session-detail">
+                Digital language resources for ANE/cuneiform (ORACC, CDLI, eBL) and classical
+                languages (Perseus, PROIEL, Index Thomisticus). Linguistic annotation &amp; NLP
+                tasks. Types of NLP models: supervised / unsupervised. Evaluation process.<br>
+                <em>Teachers: Shai Gordin, Marco Passarotti</em>
+              </div>
+            </td>
+            <td>
+              <!-- TODO: replace placeholder with Track 2 schedule once received from Morris Alper and Steffen Bauer -->
+              <span class="session-label label-t2">Teaching</span>
+              <div class="placeholder-cell">Full schedule coming soon — check back after 6 April 2026.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Teaching</span>
+              <div class="session-theme">Introduction to Network Analysis</div>
+              <div class="session-detail">
+                10:00–11:00 Introductory lecture: What is network analysis? Examples from
+                spatial, social, and lexical networks.<br>
+                11:00–12:00 History of data visualization in ancient studies.<br>
+                12:00–13:00 Layout of networks: graph layout and application of network
+                algorithms in humanities and social sciences.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+          <tr class="lunch-row">
+            <td class="time-cell">13:00–15:00</td>
+            <td colspan="3" class="lunch-cell">&#127829; Lunch break</td>
+          </tr>
+          <tr>
+            <td class="time-cell">15:00–18:00<br><em style="font-weight:normal;font-size:0.75rem;">Practical / Hackathon</em></td>
+            <td>
+              <span class="session-label label-t1">Hands-on</span>
+              <div class="session-theme">Setup &amp; Orientation</div>
+              <div class="session-detail">
+                Demo: supervised model (e.g. UDPipe). Setting up LLMs for the week.
+                Collecting pre-defined linguistic questions from ANE/cuneiform &amp; classical
+                corpora. Student stream assignment: Guided (beginners) vs. Independent
+                (advanced).<br>
+                <em>Teachers: Shai Gordin, Giulia Rambelli</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Practical</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Tutorial</span>
+              <div class="session-theme">Choose Your Network</div>
+              <div class="session-detail">
+                Creating and editing network data formats, with sample data or students' own
+                data.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Day 2: Tuesday 7 July ===== -->
+    <section class="schedule-day" id="day-2">
+      <h2>Tuesday, 7 July 2026</h2>
+      <table class="schedule-table" aria-label="Schedule for Tuesday 7 July">
+        <thead>
+          <tr>
+            <th class="th-time">Time</th>
+            <th class="th-t1">Track 1 — Ancient Language Processing</th>
+            <th class="th-t2">Track 2 — Computer Vision</th>
+            <th class="th-t3">Track 3 — Network Analysis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-cell">10:00–13:00<br><em style="font-weight:normal;font-size:0.75rem;">Morning Teaching</em></td>
+            <td>
+              <span class="session-label label-t1">Teaching</span>
+              <div class="session-theme">Embeddings &amp; Transformer Architecture</div>
+              <div class="session-detail">
+                Word and contextual embeddings. Transformer architecture &amp; attention
+                mechanism. Practical implications for low-resource ancient languages.<br>
+                <em>Teacher: Rachele Sprugnoli</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Teaching</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Teaching</span>
+              <div class="session-theme">Methods in Network Analysis</div>
+              <div class="session-detail">
+                10:00–11:00 Methods in network analysis: formats, nodes, edges, labels, and
+                additional parameters.<br>
+                11:00–12:00 Survey of tools for network analysis: spatial, social, and
+                material data.<br>
+                12:00–13:00 Survey of common tools and practices for building networks of
+                language data.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+          <tr class="lunch-row">
+            <td class="time-cell">13:00–15:00</td>
+            <td colspan="3" class="lunch-cell">&#127829; Lunch break</td>
+          </tr>
+          <tr>
+            <td class="time-cell">15:00–18:00<br><em style="font-weight:normal;font-size:0.75rem;">Hackathon</em></td>
+            <td>
+              <span class="session-label label-t1">Hackathon</span>
+              <div class="session-theme">Zero-shot Prompting</div>
+              <div class="session-detail">
+                Zero-shot prompting on pre-defined ANE and classical linguistic questions.
+                Supervised model(s) run in parallel where available. Recording results for
+                comparison across days.<br>
+                <em>Teachers: Shai Gordin, Giulia Rambelli, Federica Iurescia</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Practical</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Tutorial</span>
+              <div class="session-theme">Working with Network Tools</div>
+              <div class="session-detail">
+                Using tools with a given dataset or participants' data, with a pre-built script
+                in a Colab notebook. Loading network data to network software (Gephilite,
+                Vistorian, etc.).<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Day 3: Wednesday 8 July ===== -->
+    <section class="schedule-day" id="day-3">
+      <h2>Wednesday, 8 July 2026</h2>
+      <table class="schedule-table" aria-label="Schedule for Wednesday 8 July">
+        <thead>
+          <tr>
+            <th class="th-time">Time</th>
+            <th class="th-t1">Track 1 — Ancient Language Processing</th>
+            <th class="th-t2">Track 2 — Computer Vision</th>
+            <th class="th-t3">Track 3 — Network Analysis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-cell">10:00–13:00<br><em style="font-weight:normal;font-size:0.75rem;">Morning Teaching</em></td>
+            <td>
+              <span class="session-label label-t1">Teaching</span>
+              <div class="session-theme">Knowledge Injection &amp; Prompt Engineering I</div>
+              <div class="session-detail">
+                Knowledge injection: parametric (fine-tuning) vs. non-parametric (RAG).
+                Prompt optimization. Prompt engineering: settings, few-shot,
+                chain-of-thought (CoT).<br>
+                <em>Teachers: Eleonora Litta, Giovanni Moretti</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Teaching</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Teaching</span>
+              <div class="session-theme">Graph Layout &amp; Network Algorithms</div>
+              <div class="session-detail">
+                10:00–11:00 Layout of networks — graph layout and application of network
+                algorithms in humanities and social sciences: theoretical aspects.<br>
+                11:00–13:00 Layout of networks — survey of examples.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+          <tr class="lunch-row">
+            <td class="time-cell">13:00–15:00</td>
+            <td colspan="3" class="lunch-cell">&#127829; Lunch break</td>
+          </tr>
+          <tr>
+            <td class="time-cell">15:00–18:00<br><em style="font-weight:normal;font-size:0.75rem;">Hackathon</em></td>
+            <td>
+              <span class="session-label label-t1">Hackathon</span>
+              <div class="session-theme">Few-shot &amp; Chain-of-Thought Prompting</div>
+              <div class="session-detail">
+                Few-shot prompting on ANE and classical linguistic questions. Chain-of-thought
+                prompting. Supervised model(s) where available. Evaluation &amp; comparison
+                with Day 1 results.<br>
+                <em>Teachers: Shai Gordin, Giovanni Moretti, Roberta Leotta, Eleonora Litta</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Practical</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Practical</span>
+              <div class="session-theme">Editing Layout &amp; Algorithms</div>
+              <div class="session-detail">
+                Editing layout and applying layout algorithms — testing with your dataset.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Day 4: Thursday 9 July ===== -->
+    <section class="schedule-day" id="day-4">
+      <h2>Thursday, 9 July 2026</h2>
+      <table class="schedule-table" aria-label="Schedule for Thursday 9 July">
+        <thead>
+          <tr>
+            <th class="th-time">Time</th>
+            <th class="th-t1">Track 1 — Ancient Language Processing</th>
+            <th class="th-t2">Track 2 — Computer Vision</th>
+            <th class="th-t3">Track 3 — Network Analysis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-cell">10:00–13:00<br><em style="font-weight:normal;font-size:0.75rem;">Morning Teaching</em></td>
+            <td>
+              <span class="session-label label-t1">Teaching</span>
+              <div class="session-theme">Cuneiform NLP Case Studies &amp; Prompt Engineering II</div>
+              <div class="session-detail">
+                Cuneiform NLP in practice: ORACC Parser, Babylonian Engine, ProtoSnap,
+                AI for sign recognition. Prompt engineering: tree-of-thought, LLM workflows,
+                API keys. Discussion: challenges of low-resource &amp; script-diverse ancient
+                languages.<br>
+                <em>Teachers: Shai Gordin, Marco Passarotti</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Teaching</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Teaching</span>
+              <div class="session-theme">Dynamic Networks</div>
+              <div class="session-detail">
+                10:00–11:00 Dynamic Networks: how can we model the change of features over
+                time or place — case studies.<br>
+                11:00–13:00 Dynamic Networks: how can we model the change of features over
+                time or place — methods.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+          <tr class="lunch-row">
+            <td class="time-cell">13:00–15:00</td>
+            <td colspan="3" class="lunch-cell">&#127829; Lunch break</td>
+          </tr>
+          <tr>
+            <td class="time-cell">15:00–18:00<br><em style="font-weight:normal;font-size:0.75rem;">Hackathon</em></td>
+            <td>
+              <span class="session-label label-t1">Hackathon</span>
+              <div class="session-theme">Tree-of-Thought &amp; Advanced Prompting</div>
+              <div class="session-detail">
+                Tree-of-thought prompting on ANE and classical linguistic questions. Supervised
+                model(s) where available. Evaluation &amp; iterative refinement. Students begin
+                preparing results presentations for Friday.<br>
+                <em>Teachers: Shai Gordin, Giovanni Moretti, Claudia Corbetta</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Practical</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Hackathon</span>
+              <div class="session-theme">Modeling Change &amp; Motion</div>
+              <div class="session-detail">
+                Hackathon focus: How do we model change and motion with networks?<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== Day 5: Friday 10 July ===== -->
+    <section class="schedule-day" id="day-5">
+      <h2>Friday, 10 July 2026</h2>
+      <table class="schedule-table" aria-label="Schedule for Friday 10 July">
+        <thead>
+          <tr>
+            <th class="th-time">Time</th>
+            <th class="th-t1">Track 1 — Ancient Language Processing</th>
+            <th class="th-t2">Track 2 — Computer Vision</th>
+            <th class="th-t3">Track 3 — Network Analysis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time-cell">10:00–13:00<br><em style="font-weight:normal;font-size:0.75rem;">Morning Teaching</em></td>
+            <td>
+              <span class="session-label label-t1">Teaching + Presentations</span>
+              <div class="session-theme">Ancient Greek NLP &amp; Student Presentations</div>
+              <div class="session-detail">
+                Ancient Greek language resources &amp; NLP tools (Perseus Digital Library,
+                PROIEL, Ancient Greek Dependency Treebank). Student presentations: results on
+                pre-defined linguistic questions — best methodology, strengths &amp; weaknesses,
+                open questions.<br>
+                <em>Teachers: Francesco Mambrini + all teachers present</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Teaching</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Teaching</span>
+              <div class="session-theme">Analyzing &amp; Publishing Network Data</div>
+              <div class="session-detail">
+                10:00–11:00 How do we understand a network: distribution, centrality, and
+                trends across disciplines.<br>
+                11:00–13:00 The future of network analysis: benefits and criticism of
+                networks.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+          <tr class="lunch-row">
+            <td class="time-cell">13:00–15:00</td>
+            <td colspan="3" class="lunch-cell">&#127829; Lunch break</td>
+          </tr>
+          <tr>
+            <td class="time-cell">15:00–18:00<br><em style="font-weight:normal;font-size:0.75rem;">Wrap-up</em></td>
+            <td>
+              <span class="session-label label-t1">Wrap-up</span>
+              <div class="session-theme">Discussion, Wrap-up &amp; Certificates</div>
+              <div class="session-detail">
+                Continued presentations if needed. Plenary discussion: state of the field,
+                promising directions. Feedback session &amp; certificates of completion.
+                Informal social.<br>
+                <em>All teachers</em>
+              </div>
+            </td>
+            <td>
+              <span class="session-label label-t2">Wrap-up</span>
+              <div class="placeholder-cell">Full schedule coming soon.</div>
+            </td>
+            <td>
+              <span class="session-label label-t3">Hackathon — Final Presentations</span>
+              <div class="session-theme">Final Presentations</div>
+              <div class="session-detail">
+                Hackathon focus: How do we model change and motion with networks?
+                Participants present their data, what they learned, and a potential modelling
+                of change or motion.<br>
+                <em>Teacher: Haleli Harel</em>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>DANES ScHack 2026</h4>
+        <address>
+          <p>University of Turin, Italy</p>
+          <p>July 6–10, 2026</p>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Part of the DANES Network</h4>
+        <p>Digital Ancient Near Eastern Studies<br>
+           <a href="https://opendanes.org" target="_blank" rel="noopener">opendanes.org</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Organised by</h4>
+        <p>Maurizio Viano, Elena Devecchi &amp;<br>Francesco Giuseppe Barsacchi<br>(University of Turin)</p>
+        <p>Academic Coordinator: Shai Gordin<br>(DHSS, Open University of Israel)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          <a href="mailto:maurizio.viano@unito.it">maurizio.viano@unito.it</a><br>
+          <a href="mailto:elena.devecchi@unito.it">elena.devecchi@unito.it</a><br>
+          <a href="mailto:shygordin@gmail.com">shygordin@gmail.com</a> (academic content)
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 DANES Network &mdash; <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(btn) {
+      var links = document.getElementById('nav-links');
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.innerHTML = open ? '&times;' : '&#9776;';
+    }
+  </script>
+
+</body>
+</html>

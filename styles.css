@@ -1,0 +1,810 @@
+/* ============================================================
+   DANES ScHack 2026 — styles.css
+   Colour palette extracted from OpenDANES (opendanes.org)
+     Source: https://github.com/DigitalPasts/openDANES/_sass/_variables.scss
+   Layout inspired by AI4AS 2026 (ai4asconference.github.io)
+   ============================================================ */
+
+/* 1. CSS custom properties (values from OpenDANES _variables.scss)
+   ---------------------------------------------------------------- */
+:root {
+  /* Primary — deep purple (nav, footer, accents) */
+  --primary:              #52053E;
+  --primary-dark:         #330327;
+  --primary-light:        #67074e;
+
+  /* Secondary — neutral warm tones */
+  --secondary:            #d7ccc8;
+  --secondary-dark:       #b6af9d;
+  --secondary-light:      #ece7e6;
+
+  /* Fourth — teal (links, Track 1 accent) */
+  --teal:                 #05878a;
+  --teal-dark:            #074e67;
+
+  /* Contrast — yellow (hover highlights) */
+  --contrast:             #feda75;
+  --contrast-secondary:   #e3ad5b;
+  --contrast-dark:        #9a6b23;
+
+  /* Background */
+  --bg:                   #FEFBF1;
+
+  /* Typography */
+  --font-main:            'Taviraj', serif;
+  --font-code:            'Source Code Pro', monospace;
+  --font-size:            18px;
+  --font-size-sm:         16px;
+  --font-size-xs:         14px;
+
+  /* Track accent colours */
+  --track1:               #05878a;   /* teal  — Ancient Language Processing */
+  --track2:               #c9543b;   /* terracotta — Computer Vision */
+  --track3:               #9a6b23;   /* warm brown — Network Analysis */
+
+  /* Layout */
+  --card-radius:          10px;
+  --max-content:          1100px;
+}
+
+/* 2. Reset & base
+   ---------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  color: #1a1a1a;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
+/* 3. Typography
+   ---------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  line-height: 1.3;
+}
+
+h1 { font-size: clamp(1.8rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.4rem, 2.8vw, 2.2rem); }
+h3 { font-size: clamp(1.15rem, 2vw, 1.6rem); }
+h4 { font-size: clamp(1rem, 1.7vw, 1.3rem); }
+
+a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+a:hover { color: var(--contrast-dark); }
+
+p { margin-bottom: 1rem; }
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li { margin-bottom: 0.35rem; }
+
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* 4. Navigation
+   ---------------------------------------------------------------- */
+.site-header {
+  background-color: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+.nav-inner {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--bg);
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition: color 0.25s;
+  flex-shrink: 0;
+}
+.nav-brand:hover { color: var(--contrast); }
+
+.nav-brand-logo {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 0.45rem 0.85rem;
+  color: var(--bg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.25s, color 0.25s;
+  text-decoration: none;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: rgba(255,255,255,0.12);
+  color: var(--contrast);
+}
+.nav-links li a.active {
+  border-bottom: 2px solid var(--contrast);
+}
+
+.nav-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--bg);
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: 0.25rem;
+  transition: color 0.25s;
+}
+.nav-toggle-btn:hover { color: var(--contrast); }
+
+/* 5. Hero section
+   ---------------------------------------------------------------- */
+.hero {
+  background: linear-gradient(rgba(51,3,39,0.72), rgba(26,3,16,0.82)),
+              url('images/hero-bg.jpg') center/cover no-repeat;
+  color: var(--bg);
+  text-align: center;
+  padding: 5rem 1.5rem 4rem;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--track1), var(--track2), var(--track3));
+}
+
+.hero h1 {
+  color: var(--bg);
+  margin-bottom: 0.6rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero .hero-sub {
+  font-size: clamp(1rem, 2.2vw, 1.4rem);
+  color: var(--contrast);
+  margin-bottom: 1.8rem;
+  font-style: italic;
+}
+
+.hero-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.5rem;
+  margin-bottom: 2.2rem;
+  font-size: 0.95rem;
+  color: var(--secondary-light);
+}
+
+.hero-facts span {
+  background: rgba(255,255,255,0.1);
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* 6. Buttons
+   ---------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  border-radius: 5px;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, transform 0.15s;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background-color: var(--teal);
+  color: #fff;
+  border-color: var(--teal);
+}
+.btn-primary:hover { background-color: var(--teal-dark); border-color: var(--teal-dark); color: #fff; }
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--bg);
+  border-color: var(--bg);
+}
+.btn-secondary:hover { background-color: var(--bg); color: var(--primary); }
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--teal);
+  border-color: var(--teal);
+}
+.btn-outline:hover { background-color: var(--teal); color: #fff; }
+
+/* 7. Section / page layout
+   ---------------------------------------------------------------- */
+.page-main {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.section-block {
+  margin-bottom: 3.5rem;
+}
+
+.section-block h2 {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary-dark);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-block h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.page-title {
+  color: var(--primary);
+  text-align: center;
+  padding: 2.5rem 1.5rem 0.5rem;
+  max-width: var(--max-content);
+  margin: 0 auto;
+}
+
+.page-title h1 {
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.4rem;
+}
+
+/* 8. Track cards (index.html + tracks.html)
+   ---------------------------------------------------------------- */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.track-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  border-top: 5px solid var(--primary);
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+.track-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+  transform: translateY(-3px);
+}
+
+.track-card.t1 { border-top-color: var(--track1); }
+.track-card.t2 { border-top-color: var(--track2); }
+.track-card.t3 { border-top-color: var(--track3); }
+
+.track-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+.t1 .track-badge { background-color: var(--track1); }
+.t2 .track-badge { background-color: var(--track2); }
+.t3 .track-badge { background-color: var(--track3); }
+
+.track-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+.t1 .track-card-title, .t1 h3 { color: var(--track1) !important; }
+.t2 .track-card-title, .t2 h3 { color: var(--track2) !important; }
+.t3 .track-card-title, .t3 h3 { color: var(--track3) !important; }
+
+.track-card .track-focus {
+  font-style: italic;
+  font-size: var(--font-size-sm);
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.track-card p {
+  font-size: var(--font-size-sm);
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Full track sections on tracks.html */
+.track-section {
+  background: #fff;
+  border-radius: var(--card-radius);
+  border-left: 6px solid var(--primary);
+  padding: 2rem 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.track-section.t1 { border-left-color: var(--track1); }
+.track-section.t2 { border-left-color: var(--track2); }
+.track-section.t3 { border-left-color: var(--track3); }
+
+.track-section .track-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.t1 .track-number { color: var(--track1); }
+.t2 .track-number { color: var(--track2); }
+.t3 .track-number { color: var(--track3); }
+
+.track-section h2 {
+  border: none;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0;
+}
+.t1 .track-section h2, .track-section.t1 h2 { color: var(--track1); }
+.t2 .track-section h2, .track-section.t2 h2 { color: var(--track2); }
+.t3 .track-section h2, .track-section.t3 h2 { color: var(--track3); }
+
+.track-focus-line {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 1.2rem;
+  font-size: var(--font-size-sm);
+}
+
+.hackathon-callout {
+  background: rgba(0,0,0,0.04);
+  border-left: 4px solid var(--contrast-secondary);
+  border-radius: 0 6px 6px 0;
+  padding: 0.85rem 1.2rem;
+  margin: 1.2rem 0;
+  font-size: var(--font-size-sm);
+}
+.hackathon-callout strong { color: var(--primary); }
+
+.teachers-mini {
+  font-size: var(--font-size-sm);
+  color: #444;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--secondary);
+}
+
+.teachers-mini strong { color: var(--primary); }
+
+/* 9. Teacher cards
+   ---------------------------------------------------------------- */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.teacher-card {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--secondary);
+}
+.teacher-card.t1 { border-top-color: var(--track1); }
+.teacher-card.t2 { border-top-color: var(--track2); }
+.teacher-card.t3 { border-top-color: var(--track3); }
+
+.teacher-card .teacher-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+
+.teacher-card .teacher-rank {
+  font-style: italic;
+  font-size: var(--font-size-sm);
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.teacher-card .teacher-affil {
+  font-size: var(--font-size-sm);
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+.teacher-card .teacher-expertise {
+  font-size: var(--font-size-xs);
+  color: #666;
+  border-top: 1px solid var(--secondary);
+  padding-top: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+/* 10. Schedule table
+    ---------------------------------------------------------------- */
+.schedule-day {
+  margin-bottom: 3rem;
+}
+
+.schedule-day h2 {
+  color: var(--primary);
+  background: var(--bg);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+
+.schedule-table thead th {
+  background-color: var(--primary);
+  color: var(--bg);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+}
+.schedule-table thead th.th-time { width: 130px; }
+.schedule-table thead th.th-t1 { color: #a8e6e8; }
+.schedule-table thead th.th-t2 { color: #f4b8ab; }
+.schedule-table thead th.th-t3 { color: #d4b483; }
+
+.schedule-table tbody tr:nth-child(even) { background-color: rgba(254,251,241,0.7); }
+.schedule-table tbody tr:nth-child(odd) { background-color: #fff; }
+.schedule-table tbody tr.lunch-row { background-color: var(--secondary-light); }
+
+.schedule-table td {
+  padding: 0.85rem 1rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.schedule-table td.time-cell {
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+  font-size: var(--font-size-xs);
+}
+
+.schedule-table td.lunch-cell {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  font-size: var(--font-size-sm);
+}
+
+.session-label {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  margin-bottom: 0.35rem;
+  color: #fff;
+}
+.label-t1 { background-color: var(--track1); }
+.label-t2 { background-color: var(--track2); }
+.label-t3 { background-color: var(--track3); }
+
+.session-theme {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.session-detail {
+  font-size: var(--font-size-xs);
+  color: #555;
+}
+
+.placeholder-cell {
+  font-style: italic;
+  color: #999;
+  font-size: var(--font-size-xs);
+}
+
+/* 11. Practical info strip
+    ---------------------------------------------------------------- */
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  background: var(--primary);
+  color: var(--bg);
+  border-radius: var(--card-radius);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+
+.info-strip-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-strip-item .info-label {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--contrast);
+  font-weight: 700;
+}
+
+.info-strip-item .info-value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* 12. Organisers row
+    ---------------------------------------------------------------- */
+.organisers-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--secondary);
+  margin-top: 2rem;
+}
+
+.org-logo img {
+  height: 56px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.org-logo img:hover { opacity: 1; }
+.org-logo-placeholder {
+  font-size: var(--font-size-sm);
+  color: #888;
+  font-style: italic;
+}
+
+/* 13. Registration page
+    ---------------------------------------------------------------- */
+.reg-info {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+
+.reg-info h2 {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary-dark);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.reg-info ul { margin-left: 1.5rem; }
+.reg-info ul li { margin-bottom: 0.4rem; font-size: var(--font-size-sm); }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+.contact-list li {
+  padding: 0.25rem 0;
+  font-size: var(--font-size-sm);
+}
+
+.form-wrapper {
+  background: #fff;
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+.form-wrapper iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+/* 14. Footer
+    ---------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--primary);
+  color: var(--bg);
+  padding: 2rem 1.5rem;
+  margin-top: 3rem;
+  font-family: var(--font-main);
+  font-size: var(--font-size-sm);
+}
+
+.footer-inner {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.footer-col h4 {
+  color: var(--contrast);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.6rem;
+}
+
+.footer-col p, .footer-col address {
+  font-style: normal;
+  line-height: 1.7;
+  color: rgba(254,251,241,0.85);
+  font-size: var(--font-size-sm);
+  margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+  color: var(--contrast);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--bg); }
+
+.footer-bottom {
+  max-width: var(--max-content);
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: rgba(254,251,241,0.6);
+}
+
+/* 15. Utilities
+    ---------------------------------------------------------------- */
+.text-center { text-align: center; }
+.text-muted { color: #666; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+.warning-note {
+  background: rgba(239,156,3,0.12);
+  border-left: 4px solid #ef9c03;
+  padding: 0.75rem 1rem;
+  border-radius: 0 6px 6px 0;
+  font-size: var(--font-size-sm);
+  margin: 1rem 0;
+}
+
+/* 16. Responsive (≤768px)
+    ---------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .nav-toggle-btn { display: block; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    background-color: var(--primary-dark);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+    padding: 0.5rem 0 1rem;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links li a {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0;
+    border-bottom: none;
+  }
+  .nav-links li a.active {
+    border-bottom: none;
+    border-left: 4px solid var(--contrast);
+  }
+
+  .hero { padding: 3.5rem 1rem 3rem; }
+
+  .info-strip { padding: 1.25rem 1rem; }
+
+  .schedule-table { font-size: var(--font-size-xs); }
+  .schedule-table td, .schedule-table th { padding: 0.6rem 0.5rem; }
+  .schedule-table thead th.th-time { width: 80px; }
+
+  .track-section { padding: 1.25rem 1.25rem 1rem; }
+
+  .footer-inner { flex-direction: column; gap: 1.5rem; }
+
+  .form-wrapper { padding: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  .schedule-table, .schedule-table thead, .schedule-table tbody,
+  .schedule-table th, .schedule-table td, .schedule-table tr {
+    display: block;
+  }
+  .schedule-table thead { display: none; }
+  .schedule-table tr { margin-bottom: 1rem; border: 1px solid var(--secondary); border-radius: 6px; overflow: hidden; }
+  .schedule-table td { border-bottom: 1px solid var(--secondary-light); }
+  .schedule-table td.time-cell::before { content: 'Time: '; }
+
+  .teachers-grid { grid-template-columns: 1fr; }
+  .tracks-grid { grid-template-columns: 1fr; }
+}

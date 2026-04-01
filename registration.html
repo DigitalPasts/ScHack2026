@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration | DANES ScHack 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/DANES_ScHack_OD.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-brand">
+        <img src="images/DANES_ScHack_OD.jpg" alt="DANES" class="nav-brand-logo"
+             onerror="this.style.display='none'">
+        DANES ScHack 2026
+      </a>
+      <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false"
+              onclick="toggleNav(this)">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracks.html">Tracks</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="registration.html" class="active">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page title -->
+  <div class="page-title">
+    <h1>Registration</h1>
+    <p class="text-muted mt-1" style="font-style:italic; font-size:1rem;">
+      Applications are now open &middot; Accepted participants notified within 2–3 weeks
+    </p>
+  </div>
+
+  <main class="page-main">
+
+    <!-- Key info -->
+    <div class="reg-info">
+      <h2>Key Information</h2>
+      <p>
+        Please complete the registration form below. Submission constitutes a formal
+        application. Accepted participants will be notified within 2–3 weeks and will receive
+        payment instructions for the registration fee.
+      </p>
+      <ul>
+        <li><strong>Registration fee:</strong> €200, covering accommodation and meals for the full week</li>
+        <li><strong>Places per track:</strong> Up to 10 students</li>
+        <li><strong>No prior programming experience</strong> is required</li>
+        <li>Students are welcome to <strong>bring their own datasets</strong> and research questions</li>
+        <li>A <strong>certificate of completion</strong> will be issued to all participants</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="reg-info">
+      <h2>Questions?</h2>
+      <p>For questions, contact the organisers:</p>
+      <ul class="contact-list">
+        <li>
+          Maurizio Viano &mdash;
+          <a href="mailto:maurizio.viano@unito.it">maurizio.viano@unito.it</a>
+        </li>
+        <li>
+          Elena Devecchi &mdash;
+          <a href="mailto:elena.devecchi@unito.it">elena.devecchi@unito.it</a><br>
+          <a href="mailto:shygordin@gmail.com">shygordin@gmail.com</a> (academic content)
+        </li>
+        <li>
+          Francesco Giuseppe Barsacchi &mdash;
+          <a href="mailto:francescogiuseppe.barsacchi@unito.it">francescogiuseppe.barsacchi@unito.it</a>
+        </li>
+        <li>
+          Shai Gordin (academic content) &mdash;
+          <a href="mailto:shygordin@gmail.com">shygordin@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Registration form -->
+    <!-- TODO: replace FORM_ID with the embeddable URL of the full registration Google Form
+         once it is live. Pre-registration form ID shown below as fallback:
+         1FAIpQLSfT83XqI2rfPPcjtQg0vT_YMG8f_1qjt3_ibGWsiQLeltbgEQ -->
+    <div class="form-wrapper">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfT83XqI2rfPPcjtQg0vT_YMG8f_1qjt3_ibGWsiQLeltbgEQ/viewform?embedded=true"
+        width="100%"
+        height="2400"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        title="DANES ScHack 2026 Registration Form"
+        loading="lazy">
+        Loading form&hellip;
+      </iframe>
+    </div>
+
+    <!-- Fallback link for browsers that block iframes -->
+    <p class="mt-2 text-center" style="font-size:var(--font-size-sm); color:#666;">
+      If the form does not load,
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfT83XqI2rfPPcjtQg0vT_YMG8f_1qjt3_ibGWsiQLeltbgEQ/viewform"
+         target="_blank" rel="noopener">open it directly &rarr;</a>
+    </p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>DANES ScHack 2026</h4>
+        <address>
+          <p>University of Turin, Italy</p>
+          <p>July 6–10, 2026</p>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Part of the DANES Network</h4>
+        <p>Digital Ancient Near Eastern Studies<br>
+           <a href="https://opendanes.org" target="_blank" rel="noopener">opendanes.org</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Organised by</h4>
+        <p>Maurizio Viano, Elena Devecchi &amp;<br>Francesco Giuseppe Barsacchi<br>(University of Turin)</p>
+        <p>Academic Coordinator: Shai Gordin<br>(DHSS, Open University of Israel)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          <a href="mailto:maurizio.viano@unito.it">maurizio.viano@unito.it</a><br>
+          <a href="mailto:elena.devecchi@unito.it">elena.devecchi@unito.it</a><br>
+          <a href="mailto:shygordin@gmail.com">shygordin@gmail.com</a> (academic content)
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 DANES Network &mdash; <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(btn) {
+      var links = document.getElementById('nav-links');
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.innerHTML = open ? '&times;' : '&#9776;';
+    }
+  </script>
+
+</body>
+</html>

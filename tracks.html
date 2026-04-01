@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracks | DANES ScHack 2026</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/DANES_ScHack_OD.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,400;0,600;0,700;1,400&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-brand">
+        <img src="images/DANES_ScHack_OD.jpg" alt="DANES" class="nav-brand-logo"
+             onerror="this.style.display='none'">
+        DANES ScHack 2026
+      </a>
+      <button class="nav-toggle-btn" aria-label="Toggle navigation" aria-expanded="false"
+              onclick="toggleNav(this)">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracks.html" class="active">Tracks</a></li>
+        <li><a href="program.html">Program</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="registration.html">Registration</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page title -->
+  <div class="page-title">
+    <h1>Tracks</h1>
+    <p class="text-muted mt-1" style="font-style:italic; font-size:1rem;">
+      Three parallel tracks · Each combining morning teaching with afternoon hackathon sessions
+    </p>
+  </div>
+
+  <main class="page-main">
+
+    <!-- Track 1 -->
+    <section class="track-section t1" id="track-alp" aria-labelledby="track1-title">
+      <div class="track-number">Track 1</div>
+      <h2 id="track1-title">Ancient Language Processing</h2>
+      <p class="track-focus-line">
+        <em>Focus: Texts &middot; NLP, computational linguistics, treebanks, ancient language processing</em>
+      </p>
+
+      <p>
+        In this track, we will explore how computational and AI-based methods can be applied
+        to ancient textual sources. We will survey digital language resources for cuneiform,
+        Akkadian, Latin, and Ancient Greek — from corpora such as ORACC, CDLI, and Perseus to
+        annotated treebanks and NLP pipelines. We will learn how language models work: how
+        words and sentences are represented as embeddings, how transformer architectures
+        process text, and how supervised models are trained and evaluated on ancient language
+        data. Building on these foundations, we will examine how to work effectively with
+        large language models (LLMs) through prompt engineering techniques, including zero-shot,
+        few-shot, chain-of-thought, and tree-of-thought prompting, as well as strategies for
+        knowledge injection such as retrieval-augmented generation (RAG) and fine-tuning.
+        Afternoon sessions are hands-on: participants will apply each method to real linguistic
+        questions drawn from ancient Near Eastern and classical corpora, compare results across
+        approaches, and present their findings at the end of the week. No prior programming
+        experience is required; students are welcome to bring their own datasets and research
+        questions.
+      </p>
+
+      <div class="hackathon-callout">
+        <strong>Hackathon focus:</strong>
+        <em>Comparing supervised and LLM-based approaches to data-driven linguistic questions
+        from ancient corpora.</em>
+      </div>
+
+      <div class="teachers-mini">
+        <strong>Teachers:</strong>
+        Shai Gordin (DHSS, Open Univ. of Israel) &middot;
+        Marco Passarotti, Francesco Mambrini, Rachele Sprugnoli, Eleonora Litta,
+        Giovanni Moretti, Giulia Rambelli, Federica Iurescia, Claudia Corbetta
+        (CIRCSE, Università Cattolica del Sacro Cuore, Milan)
+        <br><br>
+        <a href="teachers.html#teachers-t1">Full teacher profiles &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="program.html#day-1">Full schedule &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Track 2 -->
+    <section class="track-section t2" id="track-cv" aria-labelledby="track2-title">
+      <div class="track-number">Track 2</div>
+      <h2 id="track2-title">Computer Vision for Material Culture</h2>
+      <p class="track-focus-line">
+        <em>Focus: Material Culture &middot; 2D Computer Vision &amp; OCR, 3D Modeling, Photogrammetry</em>
+      </p>
+
+      <p>
+        In this track, we will use computational tools applied to 2D and 3D data to analyse
+        physical objects and areas reflecting cultures across time and space. We will learn
+        about foundational tools in computer vision, including state-of-the-art methods for
+        classifying images, identifying and segmenting objects, and digitising physical text,
+        applied to photographed and scanned artefacts and manuscripts. We will introduce
+        methods for collecting, inferring, and visualising 3D models, showing how this can be
+        used to analyse artefacts and spaces beyond flat images. Finally, we will introduce
+        recent AI methods combining visual and textual input, such as multimodal LLMs, and
+        show how these can be used to gain new insights on material culture. Lectures will be
+        followed by hands-on sessions where participants practise skills such as applying
+        computer vision algorithms using Python and Jupyter, and experimenting with 3D
+        modelling tools such as GigaMesh.
+      </p>
+
+      <div class="hackathon-callout">
+        <strong>Hackathon focus:</strong>
+        <em>Applying 2D and 3D computational imaging pipelines to participants' own datasets
+        of ancient artefacts.</em>
+      </div>
+
+      <div class="teachers-mini">
+        <strong>Teachers:</strong>
+        Morris Alper (Carnegie Mellon University) &middot;
+        Steffen Bauer (IWR, Heidelberg University)
+        <br><br>
+        <a href="teachers.html#teachers-t2">Full teacher profiles &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="program.html#day-1">Full schedule &rarr;</a>
+      </div>
+    </section>
+
+    <!-- Track 3 -->
+    <section class="track-section t3" id="track-network" aria-labelledby="track3-title">
+      <div class="track-number">Track 3</div>
+      <h2 id="track3-title">Network Analysis for Ancient Cultures</h2>
+      <p class="track-focus-line">
+        <em>Focus: Networks &middot; Spatial and social network analysis, dynamic network visualization</em>
+      </p>
+
+      <p>
+        The Network Analysis track focuses on understanding how to study the dynamic,
+        interactive aspects of ancient societies and model them as networks. We will look into
+        various aspects of ancient culture, such as motion, trade, and the spread of goods,
+        whether lexical or material. We will learn how to create and annotate network data.
+        The tools we will experiment with will be open tools, such as programming packages and
+        free software. No prior experience is needed; students are welcome to bring their own
+        data, be it lexical, material, social, or spatial, from the ancient world. Otherwise,
+        we will work with existing data relevant to your individual interests and field of
+        expertise. Upon completing the track, you would be able to critically analyze networks
+        across various disciplines in ancient and modern cultures. You will develop proficiency
+        in editing and plotting network data formats and become acquainted with common methods
+        practiced in network analysis.
+      </p>
+
+      <div class="hackathon-callout">
+        <strong>Hackathon focus:</strong>
+        <em>Dynamic Networks: Modeling Change and Motion with Networks.</em>
+      </div>
+
+      <!-- TODO: replace [TBD] with confirmed second teacher details once identified -->
+      <div class="teachers-mini">
+        <strong>Teachers:</strong>
+        Haleli Harel (BBAW Berlin, Postdoctoral Fellow Minerva Stiftung) &middot;
+        [Replacement TBD]
+        <br><br>
+        <a href="teachers.html#teachers-t3">Full teacher profiles &rarr;</a>
+        &nbsp;&nbsp;
+        <a href="program.html#day-1">Full schedule &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>DANES ScHack 2026</h4>
+        <address>
+          <p>University of Turin, Italy</p>
+          <p>July 6–10, 2026</p>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>Part of the DANES Network</h4>
+        <p>Digital Ancient Near Eastern Studies<br>
+           <a href="https://opendanes.org" target="_blank" rel="noopener">opendanes.org</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Organised by</h4>
+        <p>Maurizio Viano, Elena Devecchi &amp;<br>Francesco Giuseppe Barsacchi<br>(University of Turin)</p>
+        <p>Academic Coordinator: Shai Gordin<br>(DHSS, Open University of Israel)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          <a href="mailto:maurizio.viano@unito.it">maurizio.viano@unito.it</a><br>
+          <a href="mailto:elena.devecchi@unito.it">elena.devecchi@unito.it</a><br>
+          <a href="mailto:shygordin@gmail.com">shygordin@gmail.com</a> (academic content)
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 DANES Network &mdash; <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC-BY 4.0</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav(btn) {
+      var links = document.getElementById('nav-links');
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.innerHTML = open ? '&times;' : '&#9776;';
+    }
+  </script>
+
+</body>
+</html>

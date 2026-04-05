@@ -142,6 +142,7 @@ em { font-style: italic; }
   height: 40px;
   width: auto;
   display: block;
+  border-radius: 8px;
 }
 
 .nav-links {
@@ -276,6 +277,18 @@ em { font-style: italic; }
   border-color: var(--teal);
 }
 .btn-outline:hover { background-color: var(--teal); color: #fff; }
+
+.btn-gold {
+  background-color: var(--contrast);
+  color: var(--primary-dark);
+  border-color: var(--contrast);
+  font-weight: 700;
+}
+.btn-gold:hover {
+  background-color: var(--contrast-secondary);
+  border-color: var(--contrast-secondary);
+  color: var(--primary-dark);
+}
 
 /* 7. Section / page layout
    ---------------------------------------------------------------- */
@@ -622,9 +635,9 @@ em { font-style: italic; }
 }
 
 .org-logo img {
-  height: 56px;
+  height: 90px;
   width: auto;
-  opacity: 0.85;
+  opacity: 0.88;
   transition: opacity 0.2s;
 }
 .org-logo img:hover { opacity: 1; }

@@ -557,6 +557,15 @@ em { font-style: italic; }
   font-size: var(--font-size-sm);
 }
 
+.schedule-table tbody tr.evening-row { background-color: rgba(82,5,62,0.06); }
+.schedule-table td.evening-cell {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
 .session-label {
   display: inline-block;
   font-size: 0.65rem;
@@ -635,9 +644,9 @@ em { font-style: italic; }
 }
 
 .org-logo img {
-  height: 90px;
+  height: 120px;
   width: auto;
-  opacity: 0.88;
+  opacity: 0.9;
   transition: opacity 0.2s;
 }
 .org-logo img:hover { opacity: 1; }

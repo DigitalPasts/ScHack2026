@@ -638,7 +638,7 @@ em { font-style: italic; }
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   border-top: 1px solid var(--secondary);
   margin-top: 2rem;
 }
@@ -646,6 +646,8 @@ em { font-style: italic; }
 .org-logo img {
   height: 120px;
   width: auto;
+  max-width: min(240px, 80vw);
+  object-fit: contain;
   opacity: 0.9;
   transition: opacity 0.2s;
 }
@@ -829,4 +831,7 @@ em { font-style: italic; }
 
   .teachers-grid { grid-template-columns: 1fr; }
   .tracks-grid { grid-template-columns: 1fr; }
+
+  .org-logo img { height: 80px; }
+  .organisers-row { gap: 1rem; }
 }

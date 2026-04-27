@@ -106,6 +106,24 @@ em { font-style: italic; }
 
 /* 4. Navigation
    ---------------------------------------------------------------- */
+
+/* Registration-closed sitewide banner */
+.reg-closed-banner {
+  background: #7a1a00;
+  color: #fff;
+  text-align: center;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  width: 100%;
+  z-index: 1100;
+}
+.reg-closed-banner a {
+  color: var(--contrast-secondary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
 .site-header {
   background-color: var(--primary);
   position: sticky;

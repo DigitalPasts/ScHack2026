@@ -108,8 +108,11 @@ Maurizio Viano · Elena Devecchi · Paolo Cozzo (Department Chair) · Shai Gordi
 - Track 2: Final Teaching & Wrap-up
 - Track 3: Final Teaching & Wrap-up (Room M)
 
-**Afternoon 15:00–18:00 — Final Presentations**
-- All tracks present their hackathon projects and findings
+**Afternoon 15:00–16:00 — Wrap-up & Certificates**
+- All tracks: final presentations, plenary discussion, feedback & certificates of completion
+
+**16:30 — Museum Tour: Museo Egizio (Egyptian Museum)**
+- All participants and teachers
 
 **Evening: Closing Aperitivo — 18:30**
 

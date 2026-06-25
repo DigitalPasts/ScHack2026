@@ -57,6 +57,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -64,7 +65,6 @@ body {
   font-family: var(--font-main);
   font-size: var(--font-size);
   color: #1a1a1a;
-  overflow-x: hidden;
   line-height: 1.7;
 }
 
@@ -518,6 +518,7 @@ em { font-style: italic; }
 
 /* 10. Schedule table
     ---------------------------------------------------------------- */
+
 .schedule-day {
   margin-bottom: 3rem;
 }

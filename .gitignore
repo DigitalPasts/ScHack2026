@@ -4,6 +4,11 @@ poster.css
 poster.html
 poster.pdf
 images/qr-registration.svg
-# Personal data files — not for public repo
+# Personal data — participant info, WiFi credentials, internal tools
+dashboard.html
 partecipanticonvegno_filled.csv
 Registration Form_ DANES ScHack 2026.csv
+
+# Internal project files — not for public repo
+CLAUDE.md
+design_handoff_schack/

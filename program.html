@@ -11,7 +11,7 @@
 <body>
 
   <!-- Navigation -->
-  <header class="site-header">
+  <header class="site-header" id="top">
     <nav class="nav-inner" role="navigation" aria-label="Main navigation">
       <a href="index.html" class="nav-brand">
         <img src="images/DANES_ScHack_OD.jpg" alt="DANES" class="nav-brand-logo"
@@ -534,6 +534,9 @@
 
   </main>
 
+  <!-- Back to top -->
+  <a href="#top" class="back-to-top" id="back-to-top" aria-label="Back to top">&#8593;</a>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
@@ -576,6 +579,18 @@
       btn.innerHTML = open ? '&times;' : '&#9776;';
     }
 
+    // Show "back to top" button after scrolling down
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      if (!btn) return;
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 600) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+      }, { passive: true });
+    })();
   </script>
 
 </body>

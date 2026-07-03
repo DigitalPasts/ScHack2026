@@ -57,7 +57,9 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* clip (not hidden) prevents horizontal overflow without turning <html>
+     into a scroll container, which would break window.scrollTo + sticky */
+  overflow-x: clip;
 }
 
 body {

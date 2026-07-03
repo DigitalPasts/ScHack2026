@@ -592,7 +592,12 @@
       }, { passive: true });
       btn.addEventListener('click', function (e) {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        var target = document.scrollingElement || document.documentElement;
+        if (target && typeof target.scrollTo === 'function') {
+          target.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          window.scrollTo(0, 0);
+        }
       });
     })();
   </script>

@@ -579,7 +579,7 @@
       btn.innerHTML = open ? '&times;' : '&#9776;';
     }
 
-    // Show "back to top" button after scrolling down
+    // Show "back to top" button after scrolling down, scroll up on click
     (function () {
       var btn = document.getElementById('back-to-top');
       if (!btn) return;
@@ -590,6 +590,10 @@
           btn.classList.remove('visible');
         }
       }, { passive: true });
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     })();
   </script>
 

@@ -12,3 +12,14 @@ Registration Form_ DANES ScHack 2026.csv
 # Internal project files — not for public repo
 CLAUDE.md
 design_handoff_schack/
+slides/
+program-at-a-glance.md
+llm-access-options.md
+llm-credits-applications.md
+
+# Diplomas — signatures and student certificates (personal data)
+diplomas/
+
+# Participant emails — do not commit
+group-photo-email.txt
+student-feedback-email.txt
